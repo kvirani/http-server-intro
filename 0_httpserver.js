@@ -37,16 +37,17 @@ var server = http.createServer(function handler(request, response) {
     response.statusCode = 404;
     response.end('<h1>NOT FOUND</h1>');
   }
-  // response.end('helloo from the other <strong>siiiiidddeee</strong>');
+  // commented out our first implementation
   // if (request.method === 'GET' && request.url === '/') {
   //   // home page
   //   response.end(indexContent);
-  // } else if (request.url === '/faq') {
+  // } else if (request.method === 'GET' && request.url === '/faq') {
   //   response.end(faqContent);
-  // } else if (request.url === '/other') {
+  // } else if (request.method === 'GET' && request.url === '/other') {
   //   response.end("Hello. It's currently " + new Date());
   // } else {
-
+  //   response.statusCode = 404;
+  //   response.end('<h1>NOT FOUND!</h1>')
   // }
 });
 
